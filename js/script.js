@@ -90,7 +90,7 @@ function DrawCircle(x, y, color) {
 	game.translate(0, title_height); // Reserved height for title
 	game.beginPath();
 	game.strokeStyle = "rgba(" + parseInt(color.substring(1, 3), 16) + ", " +
-					   parseInt(color.substring(3, 5), 16) + ", " + parseInt(color.substring(5, 7), 16) + ", 0.4)";
+						 parseInt(color.substring(3, 5), 16) + ", " + parseInt(color.substring(5, 7), 16) + ", 0.4)";
 	game.fillStyle = game.strokeStyle;
 	game.arc((x - 1) * size + size / 2, (y - 1) * size + size / 2, radius, 0, 2 * Math.PI, false);
 	game.fill();
@@ -149,7 +149,7 @@ function DrawPlayerName() {
 
 	game.fillStyle = player2_color;
 	game.fillText(player2_name, col * size - MeasureText(player2_name, false, "CustomFont", 18)[0],
-				  Math.ceil((title_height - MeasureText(player2_name, false, "CustomFont", 18)[1]) / 2));
+					Math.ceil((title_height - MeasureText(player2_name, false, "CustomFont", 18)[1]) / 2));
 
 	game.restore();
 }
@@ -201,7 +201,7 @@ function ShowMessage(title, message) {
 			cssClass: cssClass,
 			action: function(dialogRef){
 					dialogRef.close();
-                }
+								}
 			}]
 		});
 }
@@ -494,7 +494,7 @@ function FindAllDir(x, y, type, weight)
 
 function FindFive(x, y) {
 	/* Status  Weight
-	   11111   100000
+		 11111   100000
 	*/
 	var type = "11111";
 	var weight = 100000;
@@ -503,12 +503,12 @@ function FindFive(x, y) {
 }
 function FindFour(x, y) {
 	/* Status  Weight
-	   011110  40000
-	   211110  10000
-	   011112
-	   10111
-	   11101
-	   11011
+		 011110  40000
+		 211110  10000
+		 011112
+		 10111
+		 11101
+		 11011
 	*/
 	var type = ["011110", "211110", "011112", "10111", "11101", "11011"];
 	var weight = [40000, 10000, 10000, 10000, 10000, 10000];
@@ -518,13 +518,13 @@ function FindFour(x, y) {
 }
 function FindThree(x, y) {
 	/* Status  Weight
-	   01110   10000
-	   010110
-	   011010
-	   21110   2000
-	   01112
-	   210110
-	   010112
+		 01110   10000
+		 010110
+		 011010
+		 21110   2000
+		 01112
+		 210110
+		 010112
 	*/
 	var type = ["01110", "010110", "011010", "21110", "01112", "210110", "010112"];
 	var weight = [10000, 10000, 10000, 2000, 2000, 2000, 2000];
@@ -535,22 +535,22 @@ function FindThree(x, y) {
 
 function FindTwo(x, y) {
 	/* Status  Weight
-	   01100   600
-	   00110
-	   01010
-	   010010
-	   211000  200
-	   000112
-	   201100
-	   001102
-	   200110
-	   011002
-	   210100
-	   001012
-	   201010
-	   010102
-	   210010
-	   010012
+		 01100   600
+		 00110
+		 01010
+		 010010
+		 211000  200
+		 000112
+		 201100
+		 001102
+		 200110
+		 011002
+		 210100
+		 001012
+		 201010
+		 010102
+		 210010
+		 010012
 	*/
 
 	var type = ["01100", "00110", "01010", "010010", "211000", "000112", "201100", "001102",
@@ -696,3 +696,8 @@ window.onresize = function() {
 }
 
 left_arrow.onload = DrawArrow;
+
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("toggled");
+});

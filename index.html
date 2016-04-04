@@ -1,18 +1,14 @@
 <html>
-    <head>
+	<head>
 		<meta charset="utf-8">
 		<title>五子棋</title>
-
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/simple-sidebar.css" rel="stylesheet">
 		<link href="css/bootstrap-dialog.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap-dialog.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
-    <body style="text-align:center;" onload="Restart();">
+		<body style="text-align:center;" onload="Restart();">
 		<div id="wrapper">
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
@@ -36,7 +32,7 @@
 							<span class="navbar-text" id="timeout" style="color: yellow;"></span>
 						</div>
 					</div>
-        </div>
+				</div>
 			</nav>
 			<!-- 內容 -->
 			<div class="container top-buffer">
@@ -47,12 +43,9 @@
 			</div>
 		</div>
 
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-dialog.min.js"></script>
 		<script src="js/script.js"></script>
-		<script>
-			$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-			});
-		</script>
-    </body>
+		</body>
 </html>
