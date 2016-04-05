@@ -315,6 +315,20 @@ function PlayerTimeout(time) {
 	}
 }
 
+function SetupTimeout() {
+	BootstrapDialog.show({
+		title:   '時間設定',
+		message: '秒數: <input type="number" class="form-control" min="1" step="1" value=' + timeout + '>',
+		buttons: [{
+								label: '確定',
+								action: function(dialogRef) {
+									timeout = dialogRef.getModalBody().find('input').val();
+									dialogRef.close();
+								}
+						 }]
+	});
+}
+
 function EndGame(font_size) {
 	var player2_name = (ai_mode) ? "Computer" : player2;
 	var string;
