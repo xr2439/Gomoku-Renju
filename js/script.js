@@ -3,7 +3,7 @@ var radius = size / 2 - 4;
 var line_width = 2;
 var title_height = 50;
 var timeout = 30;
-var col = 12, row = 12;
+var col = 15, row = 15;
 
 var player1 = "Player 1";
 var player2 = "Player 2";
